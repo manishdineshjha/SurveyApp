@@ -1,0 +1,190 @@
+@import "./variable.scss";
+@font-face {
+    font-family: "Lato-Bold";
+    src: url("./fonts/Lato/Lato-Bold.ttf");
+    font-display: swap;
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: "Lato-Thin";
+    src: url("./fonts/Lato/Lato-Thin.ttf");
+    font-display: swap;
+    font-weight: 100;
+  }
+  @font-face {
+    font-family: "Lato-Light";
+    src: url("./fonts/Lato/Lato-Light.ttf");
+    font-display: swap;
+    font-weight: 300;
+  }
+  @font-face {
+    font-family: "Lato-Regular";
+    src: url("./fonts/Lato/Lato-Regular.ttf");
+    font-display: swap;
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: "Lato-Black";
+    src: url("./fonts/Lato/Lato-Black.ttf");
+    font-display: swap;
+    font-weight: 900;
+  }
+  @font-face {
+    font-family: "Lato-Italic";
+    src: url("./fonts/Lato/Lato-Italic.ttf");
+    font-display: swap;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  body {
+    margin: 0;
+    font-family: $font-family;
+    line-height: 1;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    font-size: $font-size;
+    color: $primary !important;
+   
+  }
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  *::-webkit-scrollbar-track {
+    background-color: #f5efef;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: #ccc;
+    z-index: 111;
+  }
+
+// ==========================================================================================
+header {
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 25%);
+}
+a {
+    text-decoration: unset !important;
+    font-family: inherit !important;
+    font-size: inherit !important;
+    color: inherit !important;
+  }
+.main-container {
+  width: 100%;
+  height: calc(100vh - 80px) !important;
+  padding: 80px 0;
+  overflow: hidden;
+  
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-header {
+  height: 80px;
+  background-color: #f5efef;
+  padding: 0 70px;
+
+  .header-right {
+    display: flex;
+    align-items: flex-end;
+    // justify-content: flex-start;
+  }
+}
+
+.wrapper{
+    height: 100vh;
+    width: 100%;
+    background-color: #e8f1e3;
+    text-align: center;
+
+}
+.main-text{
+    padding: 10%;
+    h1{
+        font-size: 50px;
+        font-weight: bolder;
+        font-style: italic;
+    }
+}
+
+.btn{
+    width: 300px;
+    padding: 5px;
+    color: #9108ed !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    &:hover{
+        color: rgb(51, 15, 227) !important;
+        font-size: 23px !important;
+
+    }
+}
+.question-window{
+    padding: 80px;
+    height: 100%;
+}
+.btn-action{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    .btn{
+    color: rgb(214, 15, 161) !important;
+
+}
+.btn-success{
+    background-color: greenyellow !important;
+} 
+}
+
+.circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  input[type="radio"] {
+    display: none;
+  }
+  
+  input[type="radio"]:checked + .circle {
+    background-color: black;
+    color: white;
+    
+  }
+
+  .options-container {
+    display: flex;
+    justify-content: center;
+   flex-wrap: wrap;
+  }
+  
+  .option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+  }
