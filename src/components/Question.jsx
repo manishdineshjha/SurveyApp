@@ -3,8 +3,8 @@ import { Button, Card, Form } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const Question = ({sessionId,setSessionId}) => {
-  let userid
+const Question = ({ sessionId, setSessionId }) => {
+  let userid;
   useEffect(() => {
     if (!localStorage.getItem("sessionId")) {
       const userid = generateSessionId();
@@ -15,8 +15,6 @@ const Question = ({sessionId,setSessionId}) => {
       setSessionId(localStorage.getItem("sessionId"));
     }
   }, []);
-
- 
 
   const generateSessionId = () => {
     const sessionIdLength = 16;
@@ -86,12 +84,8 @@ const Question = ({sessionId,setSessionId}) => {
       showCancelButton: true,
       confirmButtonText: "Yes, submit it!",
       cancelButtonText: "No, cancel!",
-      onClose: () => {
-        history("/");
-      },
     }).then((result) => {
       if (result.isConfirmed) {
-        
         const responseData =
           JSON.parse(localStorage.getItem("surveyResponses")) || {};
         responseData[sessionId] = JSON.stringify(answers);
